@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events by Zesty | Professional Event Planning</title>
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --secondary: #1e293b;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --text-muted: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 8rem 2rem 5rem;
+            background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin: 10rem auto 0;
+            margin-top: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: #fef3c7;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.25rem; }
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Events by Zesty</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Turning Your Vision Into Unforgettable Events</h1>
+            <p>From seamless corporate conferences to breathtaking bespoke weddings and vibrant social celebrations.</p>
+            <a href="#contact" class="btn">Book a Free Consultation</a>
+        </section>
+
+        <section id="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Corporate Events</h3>
+                    <p>Product launches, office galas, networking dinners, and custom business meeting logistics tailored to highlight your brand.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Weddings</h3>
+                    <p>Full-tier wedding coordination, venue curation, milestone timeline planning, and exquisite custom styling for your big day.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Social Celebrations</h3>
+                    <p>Bespoke planning for memorable birthdays, milestone family gatherings, baby showers, and beautiful festive anniversaries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background: white; max-width: 100%;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <div>
+                        <h3>Our Story</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Events by Zesty was born from a genuine passion for flawless organization, creative aesthetics, and bringing pure joy to people's milestones. We take the stressful heavy lifting out of planning, letting you completely immerse yourself as a guest at your own event.</p>
+                        <p style="color: var(--text-muted);">Whether you are coordinating an intricate multi-day workshop or designing an intimate dinner party, we provide reliable local planning connections, trusted premium suppliers, and elegant attention to detail from concept to clean-up.</p>
+                    </div>
+                    <div style="background: #fffbeb; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary);">
+                        <h4 style="margin-bottom: 1rem; color: var(--secondary);">Why Choose Us?</h4>
+                        <ul style="list-style-position: inside; color: var(--text-muted);">
+                            <li style="margin-bottom: 0.5rem;">Stress-free end-to-end planning blueprints</li>
+                            <li style="margin-bottom: 0.5rem;">Trusted network of local premier caterers and venues</li>
+                            <li style="margin-bottom: 0.5rem;">Completely tailored themes built around your vision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="contact-info" style="text-align: center;">
+                    <h3>Contact Details</h3>
+                    <p style="margin-bottom: 1.5rem; color: #cbd5e1;">Ready to start organizing your next big project? Reach out directly using the information below:</p>
+                    <a href="tel:+447425926497" class="contact-link"><strong>Phone:</strong> +44 7425 926497</a>
+                    <a href="mailto:fumilola37@gmail.com" class="contact-link"><strong>Email:</strong> fumilola37@gmail.com</a>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #cbd5e1;">📍 Serving Rochdale and surrounding regions</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Events by Zesty. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
